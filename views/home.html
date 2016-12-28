@@ -1,0 +1,31 @@
+
+<div>
+	<input type="" name="" data-ng-model="searchname">
+	<div >
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="item in list | filter:searchname" ng-include="'views/user.html'">
+				</tr>
+			</tbody>
+		</table>
+
+		<ul>
+			<li ng-repeat="item in list | filter:searchname" style="display:block;">
+				<hello-word></hello-word>
+			</li>
+
+		</ul>
+
+		<form ng-submit="addPerson()">
+			<input type="text" name="" ng-model="name" placeholder="Name">
+			<input type="number" name="" ng-model="age" placeholder="Age">
+			<input type="submit" name="Submit" class="btn btn-primary btn-sm">
+		</form>
+	</div>
+</div>
